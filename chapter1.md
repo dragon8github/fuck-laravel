@@ -35,3 +35,37 @@ $ composer
 
 当看到composer信息的时候，说明安装成功了！
 
+### 1.3 安装 Laravel
+
+首先，使用 Composer 下载 Laravel 安装程序：
+
+```
+$ composer global require "laravel/installer"
+```
+
+安装完成之后默认在$HOME目录下的~/.composer目录中
+
+```
+$ cd ~/.composer/vendor
+$ ls
+
+-rw-r--r--   1 lizhaohong  staff  178  2 25 23:59 autoload.php
+drwxr-xr-x   3 lizhaohong  staff   96  2 25 23:59 bin
+drwxr-xr-x  11 lizhaohong  staff  352  2 25 23:59 composer
+drwxr-xr-x   5 lizhaohong  staff  160  2 25 23:59 guzzlehttp
+drwxr-xr-x   3 lizhaohong  staff   96  2 25 23:59 laravel
+drwxr-xr-x   3 lizhaohong  staff   96  2 25 23:59 psr
+drwxr-xr-x   6 lizhaohong  staff  192  2 25 23:58 symfony
+```
+
+我们再将`$HOME/.composer/vendor/bin`目录放在你的环境变量 $PATH 中，以便系统可以找到`laravel`的可执行文件。
+
+```
+$ export PATH=$PATH:~/.composer/vendor/bin
+
+$ echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/lizhaohong/.composer/vendor/bin
+```
+
+
+
