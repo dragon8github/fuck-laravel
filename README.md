@@ -1,3 +1,10 @@
-# My Awesome Book
+# 传送门
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+官方网站：[https://docs.golaravel.com/docs/5.6/installation/](https://docs.golaravel.com/docs/5.6/installation/)
+
+中文安装教程：[https://d.laravel-china.org/docs/5.5/installation](https://d.laravel-china.org/docs/5.5/installation)
+
+中文文档：https://d.laravel-china.org/docs/5.1/routing
+
+书籍推荐：《Laravel框架关键技术解析》
+
