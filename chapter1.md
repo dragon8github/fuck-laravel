@@ -64,8 +64,6 @@ drwxr-xr-x   6 lizhaohong  staff  192  2 25 23:58 symfony
 $ export PATH=$PATH:~/.composer/vendor/bin
 ```
 
-
-
 ### 1.4 创建一个laravel项目
 
 ```
@@ -75,5 +73,5 @@ $ laravel new blog
 long time wait...
 ```
 
-完成![](/assets/import.png)
+![](/assets/import.png)
 
