@@ -10,7 +10,7 @@ $ curl -sS https://getcomposer.org/installer | php
 
 ### 1.2 将 composer 加入全局变量
 
-当你下载了**composer.phar **后，默认放在家目录中，可以将它放在全局目录，毕竟会频繁调用。
+当你下载了**composer.phar **后，将它放在全局目录，毕竟会频繁调用。
 
 ```php
 $ echo $PATH
@@ -34,8 +34,4 @@ $ composer
 ```
 
 当看到composer信息的时候，说明安装成功了！
-
-
-
-
 
