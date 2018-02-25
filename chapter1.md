@@ -1,14 +1,12 @@
 传送门：[Mac下homebrew安装及php.mysql.nginx环境安装及配置](http://blog.qiji.tech/archives/132)
 
-###  1.1. 下载composer
+### 1.1. 下载composer
 
 ```
 $ curl -sS https://getcomposer.org/installer | php
 ```
 
-手动下载composer[：https://getcomposer.org/download/](https://getcomposer.org/download/)
-
-
+> 手动下载composer[：https://getcomposer.org/download/](https://getcomposer.org/download/)
 
 ### 1.2 将 composer 加入全局变量
 
