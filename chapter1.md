@@ -1,6 +1,6 @@
 传送门：[Laravel 安装指南 \| Laravel 5.5 中文文档](https://d.laravel-china.org/docs/5.5/installation)
 
-### 1.1. 下载composer
+### 1.1. 下载 composer
 
 ```php
 $ curl -sS https://getcomposer.org/installer | php
@@ -10,7 +10,7 @@ $ curl -sS https://getcomposer.org/installer | php
 
 ### 1.2 将 composer 加入全局变量
 
-当你下载了**composer.phar **后，将它放在全局目录，毕竟会频繁调用。
+当你下载了 **composer.phar **后，将它放在全局目录，毕竟会频繁调用。
 
 ```php
 $ echo $PATH
@@ -64,9 +64,9 @@ drwxr-xr-x   6 lizhaohong  staff  192  2 25 23:58 symfony
 $ export PATH=$PATH:~/.composer/vendor/bin
 ```
 
-### 1.4 创建一个laravel项目
+### 1.4 创建一个 Laravel 项目
 
-我们将在桌面创建一个名为blog的laravel项目
+我们将在桌面创建一个名为 blog 的 Laravel 项目
 
 ```
 $ cd ~/Desktop
