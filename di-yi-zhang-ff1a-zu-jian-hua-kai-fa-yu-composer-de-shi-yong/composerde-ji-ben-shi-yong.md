@@ -2,18 +2,18 @@
 
 #### 1.1 composer init
 
-以交互式的方式初始化composer，生成composer.json文件，这也是使用 `$ composer require <pageage>` 的前提。
+以交互式的方式初始化composer.json，一路回车即可。
 
-```
-
-```
+然后会生成composer.json文件，这也是使用 `$ composer require <pageage>` 的前提。
 
 #### 1.2 composer require
 
-添加新的依赖包到项目，并更新 composer.json 内容的依赖信息
+添加新的依赖包到项目，并更新 composer.json 内容的依赖信息。
+
+当前目录必须存在composer.json才可以使用此命令。
 
 ```
-
+$ composer require monolog/monolog
 ```
 
 #### 1.3 composer.json
