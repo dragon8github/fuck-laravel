@@ -66,3 +66,14 @@ $ export PATH=$PATH:~/.composer/vendor/bin
 
 
 
+### 1.4 创建一个laravel项目
+
+```
+$ cd ~/Desktop
+$ laravel new blog
+
+long time wait...
+```
+
+完成![](/assets/import.png)
+
