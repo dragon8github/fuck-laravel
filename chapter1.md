@@ -62,9 +62,6 @@ drwxr-xr-x   6 lizhaohong  staff  192  2 25 23:58 symfony
 
 ```
 $ export PATH=$PATH:~/.composer/vendor/bin
-
-$ echo $PATH
-/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/lizhaohong/.composer/vendor/bin
 ```
 
 
