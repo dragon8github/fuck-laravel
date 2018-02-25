@@ -81,10 +81,11 @@ long time wait...
 
 我们进入blog目录，运行`$ php artisan serve`命令开启服务器
 
-```
+```php
 $ cd ~/Desktop/blog
 $ php artisan serve
 Laravel development server started: <http://127.0.0.1:8000>
+[Mon Feb 26 00:38:56 2018] 127.0.0.1:53949 [200]: /favicon.ico
 ```
 
 访问 [http://127.0.0.1:8000](http://127.0.0.1:8000)![](/assets/1import.png)
