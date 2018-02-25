@@ -1,4 +1,4 @@
-传送门：[Mac下homebrew安装及php.mysql.nginx环境安装及配置](http://blog.qiji.tech/archives/132)
+传送门：[Laravel 安装指南 \| Laravel 5.5 中文文档](https://d.laravel-china.org/docs/5.5/installation)
 
 ### 1.1. 下载composer
 
@@ -85,7 +85,6 @@ long time wait...
 $ cd ~/Desktop/blog
 $ php artisan serve
 Laravel development server started: <http://127.0.0.1:8000>
-[Mon Feb 26 00:38:56 2018] 127.0.0.1:53949 [200]: /favicon.ico
 ```
 
 访问 [http://127.0.0.1:8000](http://127.0.0.1:8000)![](/assets/1import.png)
