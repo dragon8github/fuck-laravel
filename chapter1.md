@@ -10,7 +10,7 @@ $ curl -sS https://getcomposer.org/installer | php
 
 ### 1.2 将 composer 加入全局变量
 
-当你下载了**composer.phar **后，默认放在家目录中，可以将它放在全局目录中，但每次当你建立新目录时，你必須再复制一个副本到新目录中，这样比较麻烦。所以最佳做法是将它放到 usr/local/bin 目录中中，成为全域指令。
+当你下载了**composer.phar **后，默认放在家目录中，可以将它放在全局目录，毕竟会频繁调用。
 
 ```
 $ echo $PATH
