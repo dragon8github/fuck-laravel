@@ -2,7 +2,7 @@
 
 ### 1.1. 下载composer
 
-```
+```php
 $ curl -sS https://getcomposer.org/installer | php
 ```
 
@@ -12,7 +12,7 @@ $ curl -sS https://getcomposer.org/installer | php
 
 当你下载了**composer.phar **后，默认放在家目录中，可以将它放在全局目录，毕竟会频繁调用。
 
-```
+```php
 $ echo $PATH
 /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
