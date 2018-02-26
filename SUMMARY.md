@@ -8,5 +8,5 @@
 
 ## 第一章：组件化开发与composer的使用
 
-* [composer的基本使用](di-yi-zhang-ff1a-zu-jian-hua-kai-fa-yu-composer-de-shi-yong/composerde-ji-ben-shi-yong.md)
+* [composer 的基本使用](di-yi-zhang-ff1a-zu-jian-hua-kai-fa-yu-composer-de-shi-yong/composerde-ji-ben-shi-yong.md)
 

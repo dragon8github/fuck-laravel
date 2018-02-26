@@ -43,6 +43,8 @@ $ composer require monolog/monolog
 
 如上一小节中，我们下载了 monolog 组件，就可以通过 `$myLog = new \monolog\Logger('helloworld')` 语句直接使用组件中的类库，而 autoload.php 文件会自动加载相应的类文件。
 
+
+
 ### 三、 composer 命令行简介
 
 ![](/assets/2import.png)
