@@ -6,11 +6,11 @@
 
 ## 一、命名空间的定义
 
-命名空间是通过关键字namespace来定义的，如果一段PHP代码要通过命名空间来封装，则命名空间的声明需要在这部分代码之前。具体实例如下所示：
+命名空间是通过关键字namespace来定义的，如果一段PHP代码要通过命名空间来封装，则命名空间的声明需要在这部分代码之前。
 
 ```php
-<?php
-namespace App\Http;
+<?php
+namespace App\Http;
 use Illuminate \Foundation\Http\Kernel as HttpKernel;
 class Kernel extends HttpKernel {
     // 其他代码内容
@@ -21,26 +21,54 @@ class Kernel extends HttpKernel {
 
 本质上，Kernel类文件的文件路径与命名空间是相互独立的、即在任何目录下都可以定义App\Http命名空间。
 
-但为了命名的规范及后期文件包含的方便，一般将命名空间与文件路径定义为相同的名称，而文件名和类名定义为相同的名称.这样通过一个类的完整名称，就可以确定这个类所在文件相对于根目录的位置，为后期文件包含提供便利，这也是PSR规范规定的部分内容。
+但为了命名的规范及后期文件包含的方便，一般将命名空间与文件路径定义为相同的名称，而文件名和类名定义为相同的名称。这样通过一个类的完整名称，就可以确定这个类所在文件相对于根目录的位置，为后期文件包含提供便利，这也是PSR规范规定的部分内容。
 
-
-
-## 二、PHP支持两种获取和使用当前命名空间的方法
+### PHP支持两种获取和使用当前命名空间的方法
 
 * 魔术常量\_\_NAMESPACE\_\_
 * namespace关键字
 
-#### 2.1 魔术常量\_\_NAMESPACE\_\_
+#### 1.1 魔术常量\_\_NAMESPACE\_\_
 
 通过魔术常量 \_\_NAMESPACE\_\_ 可以直接获取当前命名空间名称的宇符串。
 
 如果是全局的代码，即不包括在任何命名空间中的代码，通过该魔术常量将获取一个空的字符串。
 
-#### 2.2 关键字namespace
+#### 1.2 关键字namespace
 
 关键字namespace可用来显式访问当前命名空间。
 
 需要注意的是，如果没有定义命名空间，即为全局空间，相当于根空间，通过“\”来表示。
+
+**Example 1 ：命名空间 App\Http**
+
+```php
+<?php
+namespace App\Http;
+echo __NAMESPACE__;  // "App\Http"
+```
+
+**Example 2 ：全局空间**
+
+```php
+<?php
+echo __NAMESPACE__;  // ""
+```
+
+**Example 3 ：命名空间 App\Http**
+
+```php
+<?php
+namespace App\Http;
+class Kernel {}
+$a = new namespace\ Kernel(); // 即 new App\Http\Kernel();
+```
+
+---
+
+## 二、命名空间的使用
+
+
 
 
 
