@@ -19,4 +19,5 @@
 ## 第二章：Laravel 框架中常用的 PHP 语法
 
 * [导读](di-er-zhang-ff1a-laravel-kuang-jia-zhong-chang-yong-de-php-yu-fa/20-ben-zhang-dao-du.md)
+* [2.1 命名空间](di-er-zhang-ff1a-laravel-kuang-jia-zhong-chang-yong-de-php-yu-fa/21-ming-ming-kong-jian.md)
 
