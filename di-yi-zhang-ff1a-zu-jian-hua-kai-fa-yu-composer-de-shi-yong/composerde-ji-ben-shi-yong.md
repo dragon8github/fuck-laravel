@@ -18,25 +18,30 @@ $ composer require monolog/monolog
 
 #### 1.3 composer.json
 
-手动创建 composer.json ，指定依赖包信息
+手动创建 composer.json ，指定依赖包信息。
 
 ```
-
+{
+    "name": "lizhaohong/testcomposer",
+    "authors": [
+        {
+            "name": "dragon8github",
+            "email": "928532756@qq.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.23"
+    }
+}
 ```
 
-#### 1.4 composer install
-
-从当前目录读取 composer.json 文件，处理依赖关系，并安装到verdor目录下
-
-```
-
-```
+然后执行`$ composer instal`命令，它从当前目录读取 composer.json 文件，处理依赖关系，并安装到verdor目录下。
 
 ### 二、 自动加载
 
-```
+在vendor目录下，提供一个自动加载文件 autoload.php，只需要在项目中通过 `require 'vendor/autoload.php'`语句引入这个文件。在使用组件时就会自动加载了。
 
-```
+如上一小节中，我们下载了 monolog 组件，就可以通过 `$myLog = new \monolog\Logger('helloworld')` 语句直接使用组件中的类库，而 autoload.php 文件会自动加载相应的类文件。
 
 ### 三、 composer 命令行简介
 
