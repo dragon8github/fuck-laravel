@@ -24,6 +24,8 @@
 
 ## 实战篇：微博系统
 
-* [3.1  静态页面](shi-zhan-pian-ff1a-wei-bo-xi-tong/31-jing-tai-ye-mian.md)
+* 导读
+* [3.1  静态页面：路由、控制器、视图、Blade模板引擎](shi-zhan-pian-ff1a-wei-bo-xi-tong/31-jing-tai-ye-mian.md)
 * [3.2 Artisan 命令](shi-zhan-pian-ff1a-wei-bo-xi-tong/32-artisan-ming-ling.md)
+* 3.3 样式美化
 
