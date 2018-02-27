@@ -49,5 +49,101 @@ _resources/assets/sass/app.scss_
 @import "node_modules/bootstrap/scss/bootstrap";
 ```
 
+将 Bootstrap 导入成功之后，我们需要使用以下命令来将 .scss 文件编译为 .css 才能正常使用，编译命令如下：
+
+```
+$ npm run dev
+```
+
+我们也可以通过下面的命令，在每次检测到 .scss 文件发生更改时，自动将其编译为 .css 文件：
+
+```
+$ npm run watch-poll
+```
+
+> 请保证在进行项目开发时 npm run watch-poll 一直运行着
+
+所有编译后的资源文件都被存放在`public`文件夹中，你能在`public/css`文件夹中看到刚刚编译成功之后的文件。
+
+
+
+接下来让我们更改基础视图的页面结构，为应用添加顶部导航，并加入帮助页和登录页的链接。
+
+_resources/views/layouts/default.blade.php_
+
+```js
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@yield('title', 'Sample App') - Laravel 入门教程</title>
+    <link rel="stylesheet" href="/css/app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+	        <a class="navbar-brand" href="#">Laravel App</a>
+	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarColor01">
+	          <ul class="navbar-nav mr-auto">
+	            <li class="nav-item active">
+	              <a class="nav-link" href="/">Home</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="/Help">Help</a>
+	            </li>
+	            <li class="nav-item">
+	              <a class="nav-link" href="/About">About</a>
+	            </li>
+	          </ul>
+	          <form class="form-inline">
+	            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+	          </form>
+	        </div>
+        </div>
+      </nav>
+
+    <div class="container">
+      @yield('content')
+    </div>    
+  </body>
+</html>
+```
+
+现在让我们接着更改首页信息，加多一些页面元素。
+
+_resources/views/static\_pages/home.blade.php_
+
+```php
+@extends('layouts.default')
+
+@section('content')
+  <div class="jumbotron">
+	    <h1 class="display-4">Hello, world!</h1>
+	    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+	    <hr class="my-4">
+	    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+	    <p class="lead">
+	      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+	    </p>
+  </div>
+@stop
+```
+
+_resources/assets/sass/app.scss_
+
+```
+// Bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+body {
+  padding-top: 80px;
+}
+```
+
 
 
