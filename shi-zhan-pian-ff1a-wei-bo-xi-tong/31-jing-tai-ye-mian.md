@@ -49,5 +49,119 @@ class StaticPagesControlle extends Controller
 }
 ```
 
+现在的静态页面控制器中还没有指定好三个页面对应的动作，让我们来为控制器加上这三个动作来处理从路由发过来的请求：
+
+_app/Http/Controllers/StaticPagesController.php_
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class StaticPagesController extends Controller
+{
+    public function home()
+    {
+        return '主页';
+    }
+
+    public function help()
+    {
+        return '帮助页';
+    }
+
+    public function about()
+    {
+        return '关于页';
+    }
+}
+```
+
+## 添加静态页面视图
+
+要在控制器中指定渲染某个视图，则需要使用到`view`方法，`view`方法接收两个参数，第一个参数是视图的路径名称，第二个参数是与视图绑定的数据，第二个参数为可选参数。
+
+_app/Http/Controllers/StaticPagesController.php_
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class StaticPagesController extends Controller
+{
+    public function home()
+    {
+        return view('static_pages/home');
+    }
+
+    public function help()
+    {
+        return view('static_pages/help');
+    }
+
+    public function about()
+    {
+        return view('static_pages/about');
+    }
+}
+```
+
+下面这行代码，将会渲染在`resources/views/static_pages/home.blade.php`文件。
+
+默认情况下，所有的视图文件都存放在`resources/views`文件夹下。
+
+```js
+return view('static_pages/home');
+```
+
+在控制器中指定渲染的视图之后，接下来便是对视图进行构建了，我们需要在`resources/views`中新增下面三个视图。
+
+resources/views/static\_pages/home.blade.php
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample App</title>
+</head>
+<body>
+  <h1>主页</h1>
+</body>
+</html>
+```
+
+resources/views/static\_pages/help.blade.php
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample App</title>
+</head>
+<body>
+  <h1>帮助页</h1>
+</body>
+</html>
+```
+
+resources/views/static\_pages/about.blade.php
+
+```php
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample App</title>
+</head>
+<body>
+  <h1>关于页</h1>
+</body>
+</html>
+```
+
 
 
