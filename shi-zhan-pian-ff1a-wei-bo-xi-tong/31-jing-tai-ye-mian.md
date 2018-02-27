@@ -163,5 +163,9 @@ resources/views/static\_pages/about.blade.php
 </html>
 ```
 
+## Blade 模板
+
+细心的你可能会留意到这三个文件的后缀名均为`.blade.php`，而不是`.php`。这是因为 Blade 是 Laravel 中提供的一套模板引擎，在 Blade 视图中我们可以使用 Laravel 为这套引擎定义的一些默认方法，并完全兼容 PHP 语法的书写。在项目运行时，Laravel 会把所有的 Blade 视图进行编译缓存成普通的 PHP 代码，因此你不必担心 Blade 会对应用产生负担。
+
 
 
