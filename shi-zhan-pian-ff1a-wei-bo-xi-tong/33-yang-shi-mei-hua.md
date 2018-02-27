@@ -40,5 +40,14 @@ $ yarn install --no-bin-links
 $ yarn add cross-env
 ```
 
+安装完成之后，让我们对 Laravel 默认生成的`app.scss`文件进行编辑，删除此文件里的所有内容，只留下面一行，导入 Bootstrap：
+
+_resources/assets/sass/app.scss_
+
+```css
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+```
+
 
 
