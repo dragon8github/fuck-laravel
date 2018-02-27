@@ -12,7 +12,7 @@
 
 [![](https://fsdhubcdn.phphub.org/uploads/images/201705/13/1/VptHggpp0v.png "file")](https://fsdhubcdn.phphub.org/uploads/images/201705/13/1/VptHggpp0v.png)
 
-> 开发页面时，最开始最重要的事情就是处理好网页路由关系
+> 开发页面时，最开始最重要的事情就是处理好网页路由的关系
 
 routes/web.php
 
@@ -22,6 +22,31 @@ routes/web.php
 Route::get('/', 'StaticPagesController@home');
 Route::get('/help', 'StaticPagesController@help');
 Route::get('/about', 'StaticPagesController@about');
+```
+
+## 生成静态页面控制器
+
+Laravel 的控制器命名规范统一使用 驼峰式大小写 和复数形式来命名，在这里我们也应该这么做。一般情况下，我们会使用下面命令来生成静态页面控制器：
+
+```php
+$ php artisan make:controller StaticPagesController
+```
+
+让我们来看下`StaticPagesController`文件生成的默认代码：
+
+_app/Http/Controllers/StaticPagesController.php_
+
+```php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class StaticPagesControlle extends Controller
+{
+    //
+}
 ```
 
 
