@@ -1,5 +1,4 @@
-Artisan 是 Laravel 提供的 CLI（命令行接口），它提供了非常多实用的命令来帮助我们开发 Laravel 应用。前面我们已使用过 Artisan 命令来生成应用的 App Key 和控制器。在本教程中，我们会用到以下 Artisan 命令，你也可以使用 `php artisan list` 来查看所有可用的 Artisan 命令。|
-
+Artisan 是 Laravel 提供的 CLI（命令行接口），它提供了非常多实用的命令来帮助我们开发 Laravel 应用。前面我们已使用过 Artisan 命令来生成应用的 App Key 和控制器。在本教程中，我们会用到以下 Artisan 命令，你也可以使用 `php artisan list` 来查看所有可用的 Artisan 命令。\|
 
 | 命令 | 说明 |
 | :--- | :--- |
