@@ -167,5 +167,94 @@ resources/views/static\_pages/about.blade.php
 
 细心的你可能会留意到这三个文件的后缀名均为`.blade.php`，而不是`.php`。这是因为 Blade 是 Laravel 中提供的一套模板引擎，在 Blade 视图中我们可以使用 Laravel 为这套引擎定义的一些默认方法，并完全兼容 PHP 语法的书写。在项目运行时，Laravel 会把所有的 Blade 视图进行编译缓存成普通的 PHP 代码，因此你不必担心 Blade 会对应用产生负担。
 
+## 使用通用视图
+
+你可能已经注意到了，前面我们创建的几个视图里面包含着一些重复的代码，这明显违反了 DRY（Don't repeat yourself）原则，导致代码变得不够灵活、简洁。因此我们需要对页面进行重构，把多余的代码从视图中抽离出来，单独创建一个默认视图来进行存放通用代码。
+
+我们给应用创建了一个 default 视图，并将其放在 `layouts` 文件夹中，default 视图将作为整个应用的基础视图。实际上你只要保证视图文件被放置在 `resources/views` 目录下即可，**Laravel 对视图的文件夹和文件命名并没有限制**，我将 default 文件放在 `layouts` 文件下，只是为了让应用的目录结构让人更好理解。
+
+_resources/views/layouts/default.blade.php_
+
+```php
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sample App</title>
+  </head>
+  <body>
+    @yield('content')
+  </body>
+</html>
+```
+
+下面的这行代码表示该占位区域将用于显示 content 区块的内容，而 content 区块的内容将由继承自 default 视图的子视图定义。
+
+```
+@yield('content')
+```
+
+Laravel 的 Blade 模板支持继承，这意味多个子视图可以共用父视图提供的视图模板。接下来让我们修改之前创建的首页视图文件，来学习下如何使用 Blade 模板的继承。
+
+_resources/views/static\_pages/home.blade.php_
+
+```
+@extends('layouts.default')
+@section('content')
+  <h1>主页</h1>
+@stop
+```
+
+接下来让我们对其它两个视图也进行更改，统一使用父视图的代码。
+
+修改完成之后，再次在网页上访问这几个静态页面，你会发现父视图的代码已被成功嵌入到子视图中。
+
+现在还有一点不足的地方，就是所有的网站标题名字都为 Sample，这可太没个性了。因此我们接下来要做的就是针对页面标题进行优化，让不同页面显示不同的标题。
+
+首先我们要修改默认视图文件，在代码显示标题的位置嵌入 @yield 区块：
+
+_resources/views/layouts/default.blade.php_
+
+```php
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@yield('title', 'Sample')</title>
+  </head>
+  <body>
+    @yield('content')
+  </body>
+</html>
+```
+
+我们给 @yield 传了两个参数，第一个参数是该区块的变量名称，第二个参数是默认值，表示当指定变量的值为空值时，使用 Sample 来作为默认值。
+
+```
+<title>@yield('title', 'Sample')</title>
+```
+
+下面让我们来为帮助页和关于页加上指定标题。
+
+_resources/views/static\_pages/help.blade.php_
+
+```
+@extends('layouts.default')
+@section('title', '帮助')
+
+@section('content')
+  <h1>帮助页</h1>
+@stop
+```
+
+resources/views/static\_pages/about.blade.php
+
+```
+@extends('layouts.default')
+@section('title', '关于')
+
+@section('content')
+  <h1>关于页</h1>
+@stop
+```
+
 
 
