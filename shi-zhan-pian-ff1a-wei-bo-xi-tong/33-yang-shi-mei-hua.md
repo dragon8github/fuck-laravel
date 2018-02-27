@@ -46,7 +46,7 @@ _resources/assets/sass/app.scss_
 
 ```css
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 ```
 
 
