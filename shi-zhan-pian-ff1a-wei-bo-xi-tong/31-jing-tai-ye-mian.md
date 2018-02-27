@@ -12,3 +12,17 @@
 
 [![](https://fsdhubcdn.phphub.org/uploads/images/201705/13/1/VptHggpp0v.png "file")](https://fsdhubcdn.phphub.org/uploads/images/201705/13/1/VptHggpp0v.png)
 
+> 开发页面时，最开始最重要的事情就是处理好网页路由关系
+
+routes/web.php
+
+```
+<?php
+
+Route::get('/', 'StaticPagesController@home');
+Route::get('/help', 'StaticPagesController@help');
+Route::get('/about', 'StaticPagesController@about');
+```
+
+
+
