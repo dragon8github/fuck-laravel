@@ -16,7 +16,7 @@
 
 routes/web.php
 
-```
+```php
 <?php
 
 Route::get('/', 'StaticPagesController@home');
