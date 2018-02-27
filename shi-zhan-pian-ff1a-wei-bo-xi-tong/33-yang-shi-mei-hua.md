@@ -65,8 +65,6 @@ $ npm run watch-poll
 
 所有编译后的资源文件都被存放在`public`文件夹中，你能在`public/css`文件夹中看到刚刚编译成功之后的文件。
 
-
-
 接下来让我们更改基础视图的页面结构，为应用添加顶部导航，并加入帮助页和登录页的链接。
 
 _resources/views/layouts/default.blade.php_
@@ -82,27 +80,27 @@ _resources/views/layouts/default.blade.php_
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-	        <a class="navbar-brand" href="#">Laravel App</a>
-	        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-	          <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarColor01">
-	          <ul class="navbar-nav mr-auto">
-	            <li class="nav-item active">
-	              <a class="nav-link" href="/">Home</a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-link" href="/Help">Help</a>
-	            </li>
-	            <li class="nav-item">
-	              <a class="nav-link" href="/About">About</a>
-	            </li>
-	          </ul>
-	          <form class="form-inline">
-	            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-	          </form>
-	        </div>
+            <a class="navbar-brand" href="#">Laravel App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/Help">Help</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/About">About</a>
+                </li>
+              </ul>
+              <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
         </div>
       </nav>
 
@@ -122,13 +120,13 @@ _resources/views/static\_pages/home.blade.php_
 
 @section('content')
   <div class="jumbotron">
-	    <h1 class="display-4">Hello, world!</h1>
-	    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-	    <hr class="my-4">
-	    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-	    <p class="lead">
-	      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-	    </p>
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
   </div>
 @stop
 ```
@@ -145,5 +143,5 @@ body {
 }
 ```
 
-
+这时候我们刷新页面：![](/assets/3import.png)
 
