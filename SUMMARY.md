@@ -8,6 +8,10 @@
 * [composer 的基本使用](di-yi-zhang-ff1a-zu-jian-hua-kai-fa-yu-composer-de-shi-yong/composerde-ji-ben-shi-yong.md)
 * [heroku 部署上线](heroku-bu-shu.md)
 
+## 实战篇：微博系统
+
+* [3.1  静态页面](shi-zhan-pian-ff1a-wei-bo-xi-tong/31-jing-tai-ye-mian.md)
+
 ## 第一章：手把手构建一个微型 Laravel MVC 框架
 
 * 1.0 导读
