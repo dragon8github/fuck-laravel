@@ -49,7 +49,7 @@ $ mysql -u root
 mysql> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0.00 sec)
 
-mysql> ALTER USER 'root'@'localhost' IDENTIFIED by '202063';
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED by '你的新密码';
 Query OK, 0 rows affected (0.01 sec)
 
 mysql> exit
