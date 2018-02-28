@@ -28,7 +28,7 @@ Route::get('/about', 'StaticPagesController@about');
 
 Laravel 的控制器命名规范统一使用 驼峰式大小写 和复数形式来命名，在这里我们也应该这么做。一般情况下，我们会使用下面命令来生成静态页面控制器：
 
-```php
+```html
 $ php artisan make:controller StaticPagesController
 ```
 
@@ -151,7 +151,7 @@ resources/views/static\_pages/help.blade.php
 
 resources/views/static\_pages/about.blade.php
 
-```php
+```html
 <!DOCTYPE html>
 <html>
 <head>
