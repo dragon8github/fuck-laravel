@@ -7,6 +7,7 @@
 * [Laravel 虚拟开发环境 Homestead](laravel-xu-ni-kai-fa-huan-jing-homestead.md)
 * [composer 的基本使用](di-yi-zhang-ff1a-zu-jian-hua-kai-fa-yu-composer-de-shi-yong/composerde-ji-ben-shi-yong.md)
 * [heroku 部署上线](heroku-bu-shu.md)
+* [Mac OS 安装MySql](mac-os-an-zhuang-mysql.md)
 
 ## 第一章：手把手构建一个微型 Laravel MVC 框架
 
