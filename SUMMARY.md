@@ -31,5 +31,5 @@
 * [3.4 局部视图](shi-zhan-pian-ff1a-wei-bo-xi-tong/34-ju-bu-shi-tu.md)
 * [3.5 路由命名与链接](shi-zhan-pian-ff1a-wei-bo-xi-tong/35-lu-you-ming-ming-yu-lian-jie.md)
 * [3.6  用户注册页面](shi-zhan-pian-ff1a-wei-bo-xi-tong/36-yong-hu-zhu-ce-ye-mian.md)
-* [3.7 数据库迁移](shi-zhan-pian-ff1a-wei-bo-xi-tong/37-shu-ju-ku-qian-yi.md)
+* [3.7 数据库迁移 Migration](shi-zhan-pian-ff1a-wei-bo-xi-tong/37-shu-ju-ku-qian-yi.md)
 
