@@ -110,7 +110,7 @@ $table->timestamps();
 
 第二步：在项目 /config/database.php 中配置好你的数据库参数。
 
-```
+```php
 'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -130,4 +130,6 @@ $table->timestamps();
 第三步：手动创建一个名为sample的数据库
 
 第四步：执行 `$ php artisan migrate`
+
+![](/assets/12import.png)
 
