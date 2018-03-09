@@ -104,9 +104,7 @@ $table->timestamps();
 
 ## 数据库迁移
 
-第一步：确保你的环境开启了数据库服务并且正常，本节以mysql为例。环境为mac ox，数据库管理工具为：[Sequel Pro](https://pan.baidu.com/s/1slWENqH)
-
-参考 [《第零章：环境安装 - Mac OS 安装MySql》](https://dragon8github.gitbooks.io/fuck-laravel/content/mac-os-an-zhuang-mysql.html)
+第一步：确保你的环境开启了数据库服务并且正常。本节以mysql为例，环境为mac ox，数据库管理工具为：[Sequel Pro](https://pan.baidu.com/s/1slWENqH) ，环境安装参考 [《第零章：环境安装 - Mac OS 安装MySql》](https://dragon8github.gitbooks.io/fuck-laravel/content/mac-os-an-zhuang-mysql.html)
 
 第二步：在项目 /config/database.php 中配置好你的数据库参数。
 
