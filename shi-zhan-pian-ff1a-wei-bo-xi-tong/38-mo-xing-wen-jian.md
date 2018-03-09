@@ -74,7 +74,7 @@ $ php artisan make:model Models/Article
 
 我们尝试删除模型并且使用`--migration`或`-m`选项，让我们将刚刚生成的模型进行删除，尝试生成迁移文件：
 
-```
+```bash
 $ rm app/Models/Article.php
 $ php artisan make:model Models/Article -m
 Model created successfully.
