@@ -70,6 +70,8 @@ $ rm app/Article.php
 $ php artisan make:model Models/Article
 ```
 
+![](/assets/13import.png)
+
 ### 创建迁移文件
 
 我们尝试删除模型并且使用`--migration`或`-m`选项，让我们将刚刚生成的模型进行删除，尝试生成迁移文件：
