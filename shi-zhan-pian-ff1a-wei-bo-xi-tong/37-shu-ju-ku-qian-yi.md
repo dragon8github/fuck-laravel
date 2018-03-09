@@ -22,7 +22,6 @@ Laravel 默认创建的两个迁移文件，一个用于构建用户表，一个
 _database/migrations/2014\_10\_12\_000000\_create\_users\_table.php_
 
 ```php
-
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -102,4 +101,33 @@ $table->timestamps();
 ```
 
 若要了解更多 $table 的可用方法，可查阅[官方文档](http://d.laravel-china.org/docs/5.5/migrations#creating-tables)。
+
+## 数据库迁移
+
+第一步：确保你的环境开启了数据库服务并且正常，本节以mysql为例。环境为mac ox，参考 《第零章：环境安装 - Mac OS 安装MySql》
+
+第二步：在项目 /config/database.php 中配置好你的数据库参数。
+
+```
+'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'sample'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', '202063'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+]
+```
+
+第三步：手动创建一个名为sample的数据库
+
+第四步：执行 `$ php artisan migrate`
+
+
 
