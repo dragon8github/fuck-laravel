@@ -39,6 +39,10 @@ Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 
 ## Gravatar 头像
 
+现在，我们要为用户的个人页面添加头像显示的功能。接下来的项目开发将使用[Gravatar](https://en.gravatar.com/)来为用户提供个人头像支持。Gravatar 为 “全球通用头像”，当你在 Gravatar 的服务器上放置了自己的头像后，可通过将自己的 Gravatar 登录邮箱进行 MD5 转码，并与 Gravatar 的 URL 进行拼接来获取到自己的 Gravatar 头像。
+
+接下来让我们在用户模型中定义一个`gravatar`方法，用来生成用户的头像。
+
 _app/Models/User.php_
 
 ```php
@@ -80,4 +84,8 @@ _resources/views/users/show.blade.php_
 ```
 
 
+
+访问http://127.0.0.1:8000/users/1
+
+![](/assets/14import.png)
 
