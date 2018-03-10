@@ -29,12 +29,47 @@ class UsersController extends Controller
 
 `show`方法添加完成之后，我们便能在视图中使用`user`变量来访问通过`view`方法传递给视图的用户数据。
 
-## 添加路由
+## resource 路由
+
+Laravel 遵从 RESTful 架构的设计原则，将数据看做一个资源，由 URI 来指定资源。对资源进行的获取、创建、修改和删除操作，分别对应 HTTP 协议提供的 GET、POST、PATCH 和 DELETE 方法。当我们要查看一个 id 为 1 的用户时，需要向`/users/1`地址发送一个 GET 请求，当 Laravel 的路由接收到该请求时，默认会把该请求传给控制器的`show`方法进行处理。
+
+Laravel 为我们提供了`resource`方法来定义用户资源路由。
 
 _routes/web.php_
 
+```php
+<?php
+
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+
+Route::get('signup', 'UsersController@create')->name('signup');
+Route::resource('users', 'UsersController');
 ```
+
+新增的 resource 方法将遵从 RESTful 架构为用户资源生成路由。该方法接收两个参数，第一个参数为资源名称，第二个参数为控制器名称。
+
+```php
+Route::resource('users', 'UsersController');
+```
+
+上面代码将等同于：
+
+```php
+Route::get('/users', 'UsersController@index')->name('users.index');
+
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+
+Route::get('/users/create', 'UsersController@create')->name('users.create');
+
+Route::post('/users', 'UsersController@store')->name('users.store');
+
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+
+Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
+
+Route::delete('/users/{user}', 'UsersController@destroy')->name('users.destroy');
 ```
 
 ## Gravatar 头像
