@@ -83,9 +83,9 @@ _resources/views/users/show.blade.php_
 @stop
 ```
 
+访问[http://127.0.0.1:8000/users/1](http://127.0.0.1:8000/users/1)，并且满足路由 + 控制器两个条件时，Laravel 将会自动查找 ID 为 1 的用户并赋值到变量
 
-
-访问http://127.0.0.1:8000/users/1
+`$user`中，如果数据库中找不到对应的模型实例，会自动生成 HTTP 404 响应。
 
 ![](/assets/14import.png)
 
