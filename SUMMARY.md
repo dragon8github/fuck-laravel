@@ -37,7 +37,7 @@
 * [3.9 REPL 创建用户对象 ](shi-zhan-pian-ff1a-wei-bo-xi-tong/39-repl-chuang-jian-yong-hu-dui-xiang.md)
 * [4.0 REPL 查找用户对象](shi-zhan-pian-ff1a-wei-bo-xi-tong/40-repl-cha-zhao-yong-hu-dui-xiang.md)
 * [4.1 REPL 更新用户对象](shi-zhan-pian-ff1a-wei-bo-xi-tong/41-repl-geng-xin-yong-hu-dui-xiang.md)
-* [4.2 显示用户的信息](shi-zhan-pian-ff1a-wei-bo-xi-tong/42-xian-shi-yong-hu-de-xin-xi.md)
+* [4.2 显示用户的信息：resource路由、Gravatar 头像](shi-zhan-pian-ff1a-wei-bo-xi-tong/42-xian-shi-yong-hu-de-xin-xi.md)
 * [4.3 注册表单](shi-zhan-pian-ff1a-wei-bo-xi-tong/43-zhu-ce-biao-dan.md)
 * [4.4 用户数据验证](shi-zhan-pian-ff1a-wei-bo-xi-tong/44-yong-hu-shu-ju-yan-zheng.md)
 

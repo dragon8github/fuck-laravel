@@ -21,7 +21,7 @@ _resources/views/users/create.blade.php_
       <h5>注册</h5>
     </div>
     <div class="panel-body">
-      <form method="POST">
+      <form method="POST" action="{{ route('users.store') }}">
           <div class="form-group">
             <label for="name">名称：</label>
             <input type="text" name="name" class="form-control" value="{{ old('name') }}">
@@ -50,5 +50,24 @@ _resources/views/users/create.blade.php_
 @stop
 ```
 
+## 路由配置
 
+_routes/web.php_
+
+```php
+<?php
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('/about', 'StaticPagesController@about')->name('about');
+Route::get('/signup', 'UsersController@create')->name('signup');
+Route::resource('users', 'UsersController');
+```
+
+请注意 `<form method="POST" action="{{ route('users.store') }}">`，这里本需要设置一个名为`users.store`的路由。
+
+```php
+Route::get('/users/store', 'UsersController@store')->name('users.store');
+```
+
+但由于`Route::resource('users', 'UsersController')`而省略了
 
